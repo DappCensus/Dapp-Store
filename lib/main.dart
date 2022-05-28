@@ -1,13 +1,31 @@
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/get_navigation.dart';
-import 'package:hstore/view/screen/introSlider.dart';
+import 'package:get_storage/get_storage.dart';
+import 'package:hstore/home.dart';
+import 'package:intro_slider/intro_slider.dart';
 
 void main() {
   runApp(const MyApp());
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
   const MyApp({Key? key}) : super(key: key);
+
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  final box = GetStorage();
+  bool existing = false;
+
+  @override
+  void initState() {
+    super.initState();
+    setState(() {
+      existing = box.read('existing') ?? false;
+    });
+  }
 
   // This widget is the root of your application.
   @override
@@ -15,7 +33,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'hStore',
-      home: IntroSliderPage(),
+      home: Home(),
     );
   }
 }

@@ -33,16 +33,16 @@ class _HomeState extends State<Home> {
                 label: "DApps"),
             BottomNavigationBarItem(
                 icon: Icon(
-                  Icons.wallet_membership_sharp,
+                  Icons.wallet_travel,
                   size: 20,
                 ),
                 label: "Wallet"),
             BottomNavigationBarItem(
                 icon: Icon(
-                  Icons.account_box_outlined,
+                  Icons.token,
                   size: 20,
                 ),
-                label: "Account"),
+                label: "NFTs"),
           ],
         ),
         body: pages[pageidx]);

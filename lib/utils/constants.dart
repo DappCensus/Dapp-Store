@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hstore/view/screen/account.dart';
+import 'package:hstore/view/screen/nfts.dart';
 import 'package:hstore/view/screen/dapps.dart';
 import 'package:hstore/view/screen/wallet.dart';
 
@@ -15,8 +15,8 @@ double screenHeight(BuildContext context) => MediaQuery.of(context).size.height;
 //STYLES
 TextStyle header = TextStyle(
     fontFamily: 'Open',
-    fontWeight: FontWeight.w700,
-    fontSize: 30,
+    fontWeight: FontWeight.bold,
+    fontSize: 20,
     color: BLACK_TEXT);
 
 TextStyle normal =
@@ -26,7 +26,7 @@ TextStyle normal =
 List pages = [
   Dapps(),
   Wallet(),
-  Account(),
+  Nfts(),
 ];
 
 //Strings
